@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tervis Lite | Terviseportaal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        :root {
+            --primary-color: #005AA3;
+            --primary-light: #EBF3F9;
+            --text-main: #1C1C1C;
+            --bg-color: #F4F7F9;
+            --white: #FFFFFF;
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--white);
+            padding: 20px 24px;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
+        }
+
+        .user-info h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .user-info p {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 4px;
+        }
+
+        .badge {
+            background: #E1F5FE;
+            color: #0277BD;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .btn-card {
+            background: var(--white);
+            border: 3px solid transparent;
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.2s ease;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .btn-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0, 90, 163, 0.15);
+        }
+
+        .btn-card span.material-symbols-outlined {
+            font-size: 56px;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            background: var(--primary-light);
+            padding: 20px;
+            border-radius: 50%;
+        }
+
+        .btn-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .btn-card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 24px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="user-info">
+            <h1>Juri Tšistjakov</h1>
+            <p>Isikukood: 3123456789</p>
+        </div>
+        <div class="badge">Lihtsustatud vaade (Tervis Lite)</div>
+    </header>
+
+    <main>
+        <!-- Кнопка 1: Врач / Запись -->
+        <a href="https://minu.terviseportaal.ee/vastuvotud" class="btn-card">
+            <span class="material-symbols-outlined">event</span>
+            <h2>Arsti vastuvõtt</h2>
+            <p>Broneeri aeg või vaata tulevasi vastuvõtte</p>
+        </a>
+
+        <!-- Кнопка 2: Рецепты -->
+        <a href="https://minu.terviseportaal.ee/retseptid" class="btn-card">
+            <span class="material-symbols-outlined">medication</span>
+            <h2>Minu retseptid</h2>
+            <p>Vaata kehtivaid retsepte ja ravimeid</p>
+        </a>
+
+        <!-- Кнопка 3: История / Анализы -->
+        <a href="https://minu.terviseportaal.ee/tervise-ajalugu#ajatelg" class="btn-card">
+            <span class="material-symbols-outlined">history</span>
+            <h2>Tervise ajalugu</h2>
+            <p>Uuringute tulemused ja varasemad haiguslood</p>
+        </a>
+
+        <!-- Кнопка 4: Семейный врач -->
+        <a href="https://www.perearst24.ee/" class="btn-card" target="_blank">
+            <span class="material-symbols-outlined">support_agent</span>
+            <h2>Perearst24</h2>
+            <p>Võta ühendust oma perearstikeskusega</p>
+        </a>
+    </main>
+
+    <footer>
+        <p>Tekkis küsimusi? Helista abitelefonil <a href="tel:1220">1220</a> või raamatukogu spetsialistile.</p>
+    </footer>
+
+</body>
+</html>
